@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+  <!-- Optional JavaScript -->
+  <div class="container">
+    <h2 class="todo1 my-3">ADD YOUR TODOS</h2>
+    <form action="/add_todo" method="POST">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" placeholder="description" name="description">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <hr>
+  <!-- <div id="success">{{success}}</div> -->
+  <hr>
+
+  <div class="container my-3">
+    <h1 class="todo1 my-5">MY TODOS</h1>
+    <a href="/MyTodos" role="button">
+      <button class="button-54">MY TODOS</button>
+    </a>
+
+  </div>
+  {% endblock body %}
